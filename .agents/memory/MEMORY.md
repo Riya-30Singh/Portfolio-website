@@ -1,0 +1,1 @@
+- [Portfolio fidelity](portfolio-fidelity.md) — keep edits limited to explicit requests; the original copy and visual style take precedence over redesign ideas.
