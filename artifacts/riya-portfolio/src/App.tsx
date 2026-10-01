@@ -171,10 +171,6 @@ function App() {
                   <div className="code-line"><span className="line-no">09</span><span>{'}'}</span></div>
                 </div>
               </div>
-              <div className="profile-badge">
-                <img src="/profile-picture.jpg" alt="Riya Singh" />
-                <span className="profile-meta"><small>PROFILE</small><strong>Riya Singh</strong></span>
-              </div>
               <span className="editor-caption">Turning curiosity into code</span>
             </div>
           </div>
