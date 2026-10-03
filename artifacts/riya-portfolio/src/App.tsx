@@ -30,9 +30,16 @@ const projects = [
     features: [
       'Add and manage tasks',
       'Priority, status and due dates',
-      'Search and filter tasks',
-      'Dashboard statistics',
+      'Search and dashboard statistics',
+      'Theme switching and persistence',
     ],
+    details: {
+      Problem: 'Make everyday task planning easy to scan and maintain without requiring an account.',
+      Approach: 'Designed a focused dashboard with clear task states, lightweight filtering and browser persistence.',
+      Challenges: 'Keeping task edits, search results and dashboard counts synchronized across sessions.',
+      Solution: 'Used structured task objects with LocalStorage persistence and derived dashboard values from the current collection.',
+      Learning: 'Built confidence in state-driven UI, data persistence and responsive interaction design.',
+    },
     href: 'https://github.com/Riya-30Singh/SmartTask-Management',
   },
   {
@@ -47,9 +54,16 @@ const projects = [
     features: [
       'Categories and difficulty selection',
       'Countdown timer and navigation',
-      'Progress tracking',
-      'Result analysis',
+      'Progress, score and accuracy',
+      'Answer review and theme switching',
     ],
+    details: {
+      Problem: 'Create a quiz flow that feels engaging while giving learners useful feedback after each attempt.',
+      Approach: 'Separated quiz setup, question flow and result states so each step stays easy to understand.',
+      Challenges: 'Managing timer behavior and preserving a reliable answer history as users navigate questions.',
+      Solution: 'Tracked the active question and answer state centrally, then calculated results from the completed response set.',
+      Learning: 'Practiced event-driven JavaScript, edge-case handling and designing feedback around user progress.',
+    },
     href: 'https://github.com/Riya-30Singh/Quiz-Master',
   },
   {
@@ -65,8 +79,15 @@ const projects = [
       'Responsive layout',
       'Project-first presentation',
       'Accessible navigation',
-      'Education and experience sections',
+      'Recruiter-focused content',
     ],
+    details: {
+      Problem: 'Turn a collection of learning milestones into a clear, credible professional identity.',
+      Approach: 'Prioritized authentic project evidence, readable structure and quick paths to code and contact details.',
+      Challenges: 'Balancing visual polish with honest, concise content that works across screen sizes.',
+      Solution: 'Used semantic sections, a consistent visual system and modular content patterns for future updates.',
+      Learning: 'Learned how information architecture and responsive design shape a professional first impression.',
+    },
     href: null,
   },
 ];
@@ -79,7 +100,7 @@ const skills = [
   { title: 'Tools', values: ['Git', 'GitHub', 'VS Code', 'MS Excel', 'PowerPoint', 'Word'] },
 ];
 
-const filters = ['All', 'Web', 'JavaScript', 'Portfolio'];
+const filters = ['All', 'Web', 'JavaScript', 'C++', 'Portfolio'];
 const sourceSite = 'https://website-source-viewer--riyasingh80037.replit.app';
 const resumeUrl = `${sourceSite}/resume.pdf`;
 
@@ -264,6 +285,9 @@ function App() {
                       <summary><Code2 size={9} /> View case study</summary>
                       <p>{project.description}</p>
                       <p><strong>Proves:</strong> {project.proves}</p>
+                      {Object.entries(project.details).map(([heading, detail]) => (
+                        <p key={heading}><strong>{heading}:</strong> {detail}</p>
+                      ))}
                     </details>
                     {project.href ? (
                       <a className="project-action" href={project.href} target="_blank" rel="noreferrer" aria-label={`View ${project.title} repository`}>
