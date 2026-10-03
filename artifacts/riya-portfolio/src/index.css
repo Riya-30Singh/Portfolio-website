@@ -400,9 +400,3 @@ button, a { -webkit-tap-highlight-color:transparent; }
   .contact-panel { grid-template-columns:1fr; padding:34px 24px; }
   .footer { align-items:flex-start; flex-direction:column; gap:13px; }
 }
-
-@media (min-width: 901px) {
-  .hero-grid { grid-template-columns:.92fr 1.08fr; }
-  .editor-wrap { grid-column:1; grid-row:1; }
-  .hero-copy { grid-column:2; grid-row:1; }
-}
