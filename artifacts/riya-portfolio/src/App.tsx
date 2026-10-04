@@ -70,30 +70,6 @@ const projects = [
     },
     href: 'https://github.com/Riya-30Singh/Quiz-Master',
   },
-  {
-    index: '03',
-    title: 'Portfolio Website',
-    kind: 'Personal site',
-    filters: ['Web', 'Portfolio'],
-    description:
-      'Designed and developed a responsive portfolio that presents technical skills, projects, education, credentials and professional direction.',
-    proves: 'React UI · responsive design · accessible navigation',
-    stack: ['React', 'TypeScript', 'Vite', 'CSS'],
-    features: [
-      'Responsive layout',
-      'Project-first presentation',
-      'Accessible navigation',
-      'Recruiter-focused content',
-    ],
-    details: {
-      Problem: 'Turn a collection of learning milestones into a clear, credible professional identity.',
-      Approach: 'Prioritized authentic project evidence, readable structure and quick paths to code and contact details.',
-      Challenges: 'Balancing visual polish with honest, concise content that works across screen sizes.',
-      Solution: 'Used semantic sections, a consistent visual system and modular content patterns for future updates.',
-      Learning: 'Learned how information architecture and responsive design shape a professional first impression.',
-    },
-    href: null,
-  },
 ];
 
 const skills = [
@@ -104,9 +80,9 @@ const skills = [
   { title: 'Tools', icon: Wrench, values: ['Git', 'GitHub', 'VS Code', 'MS Excel', 'PowerPoint', 'Word'] },
 ];
 
-const filters = ['All', 'Web', 'JavaScript', 'C++', 'Portfolio'];
+const filters = ['All', 'Web', 'JavaScript', 'C++'];
 const sourceSite = 'https://website-source-viewer--riyasingh80037.replit.app';
-const resumeUrl = `${sourceSite}/resume.pdf`;
+const resumeUrl = `${import.meta.env.BASE_URL}resume.pdf`;
 
 const internships = [
   {
@@ -196,7 +172,7 @@ function App() {
               <a className="secondary-button" href={resumeUrl} target="_blank" rel="noreferrer"><ArrowDown size={14} /> Download resume</a>
             </div>
             <div className="proof-rail" aria-label="Portfolio summary">
-              <a href="#projects"><strong>3</strong><span>Projects</span></a>
+              <a href="#projects"><strong>2</strong><span>Projects</span></a>
               <a href="#experience"><strong>2</strong><span>Internships</span></a>
               <a href="#education"><strong>7.8</strong><span>BCA CGPA</span></a>
             </div>
